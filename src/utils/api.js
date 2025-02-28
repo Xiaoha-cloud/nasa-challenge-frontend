@@ -3,14 +3,15 @@ import axios from "axios";
 console.log("NASA_API_URL:", process.env.REACT_APP_NASA_API_URL);
 console.log("NASA_API_KEY:", process.env.REACT_APP_NASA_API_KEY);
 
+const apiUrl = process.env.REACT_APP_NASA_API_URL;
+
 const api = axios.create({
-  baseURL: process.env.REACT_APP_NASA_API_URL, 
+  baseURL: apiUrl, 
 });
 
 export const fetchAPOD = async () => {
   try {
     const apiKey = process.env.REACT_APP_NASA_API_KEY;
-    const apiUrl = process.env.REACT_APP_NASA_API_URL;
     if (!apiKey) {
       throw new Error("API key is missing! Check .env.local configuration.");
     }
