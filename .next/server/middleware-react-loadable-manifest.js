@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST='{"components/ISSLiveMap.js -> react-leaflet":{"id":614,"files":["static/chunks/614.4be58a9841513819.js"]},"pages/data-hub.js -> ../components/ISSLiveMap":{"id":7374,"files":["static/css/e3f918fc1af7f5e2.css","static/chunks/0b7b90cd.dc0104c580feac4e.js","static/chunks/374.db9b02f666bf93dc.js"]}}';

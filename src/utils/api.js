@@ -1,9 +1,14 @@
 import axios from "axios";
 
-console.log("NASA_API_URL:", process.env.REACT_APP_NASA_API_URL);
-console.log("NASA_API_KEY:", process.env.REACT_APP_NASA_API_KEY);
+const apiUrl = "https://api.nasa.gov";
+const apiKey = "1qk9V1xvlEm46wDIb1oOKDI9nZ5ftzk6cMN4Gy3V";
 
-const apiUrl = process.env.REACT_APP_NASA_API_URL;
+console.log("NASA_API_URL:", apiUrl);
+console.log("NASA_API_KEY:", apiKey);
+
+if (!apiUrl || !apiKey) {
+  throw new Error("API URL or API key is missing!");
+}
 
 const api = axios.create({
   baseURL: apiUrl, 
@@ -11,10 +16,6 @@ const api = axios.create({
 
 export const fetchAPOD = async () => {
   try {
-    const apiKey = process.env.REACT_APP_NASA_API_KEY;
-    if (!apiKey) {
-      throw new Error("API key is missing! Check .env.local configuration.");
-    }
     const response = await api.get(`/planetary/apod?api_key=${apiKey}`);
     if (!response.status === 200) throw new Error(`HTTP error! Status: ${response.status}`);
     const data = response.data;
@@ -51,6 +52,6 @@ export const fetchISSData = async () => {
 
 // Remove the incorrect fetchStatus function
 // export const fetchStatus = async () => {
-//   const response = await api.get(`/status?api_key=${process.env.REACT_APP_NASA_API_KEY}`);
+//   const response = await api.get(`/status?api_key=${apiKey}`);
 //   return response.data;
 // };
