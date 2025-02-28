@@ -1,0 +1,1 @@
+// This file uses three and @react-three/fiber, so it should be deleted.
