@@ -1,16 +1,25 @@
-/* Ensure the correct path to Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 /* Custom styles can be added here */
 
+/* Add your global styles here */
 body {
-  @apply bg-black text-white font-sans;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  @apply bg-gray-900 text-gray-100 min-h-screen font-['Space_Mono'];
 }
 
 h1, h2, h3, h4, h5, h6 {
   @apply font-bold;
+}
+
+h1, h2, h3 {
+  @apply text-white;
 }
 
 a {
@@ -18,11 +27,7 @@ a {
 }
 
 button {
-  @apply bg-blue-500 text-white rounded-lg px-4 py-2 transition duration-300 ease-in-out;
-}
-
-button:hover {
-  @apply bg-blue-600;
+  @apply rounded-md px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 transition;
 }
 
 .loader {
@@ -35,4 +40,35 @@ button:hover {
 
 .modal-content {
   @apply bg-white rounded-lg p-4 shadow-lg;
+}
+
+nav {
+  @apply fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-800;
+}
+
+/* Use a class for nav links instead of nested selector */
+.nav-link {
+  @apply text-gray-300 hover:text-custom/80 font-medium;
+}
+
+/* Use a class for footer email input instead of nested selector */
+.footer-email-input {
+  @apply w-full bg-gray-800 border border-gray-700 text-gray-300 px-4 py-2 rounded focus:ring-2 focus:ring-custom focus:border-transparent;
+}
+
+footer {
+  @apply bg-gray-900 border-t border-gray-800;
+}
+
+footer a {
+  @apply text-gray-400 hover:text-custom;
+}
+
+footer form button {
+  @apply w-full bg-custom text-white px-4 py-2 rounded hover:bg-custom/90;
+}
+
+/* Remove redundant class definitions for Tailwind CSS built-in classes */
+.absolute, .inset-0, .bg-cover, .bg-center, .flex, .items-center, .justify-center, .p-4, .text-center, .text-white, .text-3xl, .font-bold, .mb-4, .text-xl, .text-gray-300, .mb-8, .space-x-4, .bg-black, .hover\:bg-gray-800, .bg-gray-700, .hover\:bg-gray-600, .bottom-4, .left-1\/2, .transform, .-translate-x-1\/2, .text-2xl, .hover\:transform, .hover\:scale-105, .transition-transform, .duration-300, .bg-gray-800, .rounded-lg, .overflow-hidden, .p-6, .text-xl, .font-bold, .mb-2, .text-gray-400, .mb-4, .text-custom, .hover\:text-custom\/80, .bg-gray-900, .py-20, .max-w-8xl, .mx-auto, .px-4, .sm\:px-6, .lg\:px-8, .text-center, .mb-16, .text-3xl, .font-orbitron, .font-bold, .mb-4, .text-gray-400, .grid, .grid-cols-1, .md\:grid-cols-2, .lg\:grid-cols-3, .gap-8, .bg-gray-800, .rounded-lg, .overflow-hidden, .hover\:transform, .hover\:scale-105, .transition-transform, .duration-300, .w-full, .h-48, .object-cover, .p-6, .text-xl, .font-bold, .mb-2, .text-gray-400, .mb-4, .text-custom, .hover\:text-custom\/80, .bg-gray-900, .py-20, .max-w-8xl, .mx-auto, .px-4, .sm\:px-6, .lg\:px-8, .text-center, .mb-16, .text-3xl, .font-orbitron, .font-bold, .mb-4, .text-gray-400, .grid, .grid-cols-1, .lg\:grid-cols-2, .gap-8, .bg-gray-900, .rounded-lg, .p-6, .text-xl, .font-bold, .mb-4, .w-full, .h-80, .rounded-lg, .overflow-hidden, .absolute, .inset-0, .object-cover, .top-1\/2, .left-1\/2, .transform, .-translate-x-1\/2, .-translate-y-1\/2, .w-4, .h-4, .bg-custom, .rounded-full, .animate-ping, .bg-gray-900, .border-t, .border-gray-800, .max-w-8xl, .mx-auto, .px-4, .sm\:px-6, .lg\:px-8, .py-12, .grid, .grid-cols-1, .md\:grid-cols-4, .gap-8, .h-8, .mb-4, .text-gray-400, .text-lg, .font-bold, .mb-4, .space-y-2, .text-gray-400, .hover\:text-custom, .text-lg, .font-bold, .mb-4, .space-y-2, .text-gray-400, .hover\:text-custom, .text-lg, .font-bold, .mb-4, .flex, .space-x-4, .mb-4, .text-gray-400, .hover\:text-custom, .space-y-4, .w-full, .bg-gray-800, .border, .border-gray-700, .text-gray-300, .px-4, .py-2, .rounded, .focus\:ring-2, .focus\:ring-custom, .focus\:border-transparent, .w-full, .bg-custom, .text-white, .px-4, .py-2, .rounded, .hover\:bg-custom\/90, .border-t, .border-gray-800, .mt-12, .pt-8, .text-center, .text-gray-400 {
+  /* Remove redundant class definitions */
 }

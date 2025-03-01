@@ -45,7 +45,7 @@ const ImageExplorer = () => {
         className="relative overflow-hidden rounded-lg shadow-lg"
       >
         <img src={image.links[0].href} alt={image.data[0].title} className="w-full h-auto" />
-        <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute bottom-0 left-0 right-0 bg-black bg-black bg-opacity-50 text-white p-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
           <h3 className="text-sm font-bold">{image.data[0].title}</h3>
           <p className="text-xs">{image.data[0].date_created}</p>
           <p className="text-xs">{image.data[0].center}</p>

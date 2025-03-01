@@ -23,10 +23,11 @@ const HeroSection = () => {
   }
 
   return (
-    <div
-      className="relative h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${apod.url})` }}
-    >
+    <div className="relative h-screen bg-cover bg-center">
+      <img src={apod.url} className="w-full h-auto" alt={apod.title} />
+      <div className="absolute inset-0 bg-black bg-black bg-opacity-50 flex items-center justify-center p-4">
+        <h1 className="text-white text-3xl font-bold">{apod.title}</h1>
+      </div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-75"></div>
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
         <motion.h1

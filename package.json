@@ -7,7 +7,8 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start -p 3000",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "tailwind-version": "npm list tailwindcss"
   },
   "dependencies": {
     "axios": "^1.8.0",
@@ -28,14 +29,17 @@
     "react-dom": "^19.0.0",
     "react-leaflet": "^5.0.0",
     "react-masonry-css": "^1.0.16",
-    "react-window": "^1.8.11"
+    "react-window": "^1.8.11",
+    "tailwindcss": "^3.0.0",
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "eslint": "^7.32.0",
     "eslint-config-next": "^12.0.7",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.9"
+    "tailwindcss": "^3.4.17"
   },
   "keywords": [
     "NASA",

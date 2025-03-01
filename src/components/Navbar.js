@@ -28,7 +28,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 bg-white bg-opacity-50 backdrop-blur-md shadow-md z-50">
+    <div className="fixed top-0 left-0 right-0 bg-white bg-black bg-opacity-50 backdrop-blur-md shadow-md z-50">
       <div className="container mx-auto p-4 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <motion.div
